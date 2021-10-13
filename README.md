@@ -5,7 +5,7 @@
 insertBefore('A') // 将 xxx 插入到 A 的前面
 ```
 
-```cssJavaScript
+```JavaScript
 JSON.parse('x') // 将字符串 x 转化为对象
 ```
 
