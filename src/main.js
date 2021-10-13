@@ -3,9 +3,10 @@ const $lastLi = $siteList.find('li.last')
 const x = localStorage.getItem('x')
 const xObject = JSON.parse(x)
 const hashMap = xObject || [
-  {logo: 'A', url: 'https://www.acfun.cn'},
-  {logo: 'B', url: 'https://www.bilibili.com'}
-]
+  {logo: 'T', url: 'https://www.taobao.com'},
+  {logo: 'B', url: 'https://www.bilibili.com'},
+  {logo: '5', url: 'https://www.56.com'}
+];
 const simplifyUrl = (url) => {
   return url.replace('https://', '')
     .replace('http://', '')
@@ -53,10 +54,10 @@ $('.addButton').on('click', () => {
   render()
 })
 
-window.onbeforeunload = () => {
-  const string = JSON.stringify(hashMap)
-  localStorage.setItem('x', string)
-}
+// window.onbeforeunload = () => {
+//   const string = JSON.stringify(hashMap)
+//   localStorage.setItem('x', string)
+// }
 
 $(document).on('keypress', (e) => {
   const {key} = e // key = e.key
